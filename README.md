@@ -28,20 +28,20 @@ W = no. of digits of the output of the hash function
 
 #### CountMinSketch
 ![](images/cms_demo.png)
--Insert: 
- - Structure initialized with zeros 
- - Each stream input goes through the hash functions
- - Output of hash function determines the column that needs to be updated in the structure. 
- - Increments of  1.
+- Insert: 
+  - Structure initialized with zeros 
+  - Each stream input goes through the hash functions
+  - Output of hash function determines the column that needs to be updated in the structure. 
+  - Increments of  1.
 
 - Count: 
- - Pass value to hash functions
- - O/p of hash functions determines the locations 
- - Obtain values at locations. Choose minimum. 
+  - Pass value to hash functions
+  - O/p of hash functions determines the locations 
+  - Obtain values at locations. Choose minimum. 
 
 - Advantages: 
- - Size of the structure independent of input
- - Lossy count with no under-counting.
+  - Size of the structure independent of input
+  - Lossy count with no under-counting.
 
 #### Express Data Path
 eXpress Data Path provides a high performance, programmable network data path in the Linux kernel.
@@ -54,11 +54,11 @@ eBPF can be used to write XDP programs.
 
 Trusted Technology - Used by Cloudflare, Facebook, Netronome, Prometheus, and many more.
 
-##### Performance Comparisons
+### Performance Comparisons
 ![](images/xdp_chart.png)
 
 
-#### Packet Flow and use of eBPF
+### Packet Flow and use of eBPF
 ![](images/packet_flow.png)
 
 Ring Buffers: Ring buffers are shared buffers between the device driver and Network Interface Card (NIC). These buffers store incoming packets until the device driver can process them. Ring buffers exist on both the receive (rx) and transmit (tx) side of each interface.
