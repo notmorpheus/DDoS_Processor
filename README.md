@@ -71,7 +71,11 @@ eBPF VM: Register-based Virtual Machine using a custom 64 bit RISC instruction s
 
 ### Future Work
 Time-bound sample of 1M packets. If Sample does not reach the set size in set amount of time, No DDoS.
+
 Feedback loop to clear old entries.
+
 Dynamically control threshold for heavy hitters.
+
 Feed Live stream to Count Min Sketch.
+
 Combine various DDoS Detection Algorithms - Entropy, Packet Size.
