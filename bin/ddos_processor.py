@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 from __future__ import division
 from bcc import BPF
 import time
@@ -14,11 +14,13 @@ import os
 import struct
 
 #Configuration
-device = "ens33"
-OUTPUT_INTERVAL = 10
-sample_size = 1000
-threshold_percent = 1
-count = 0
+device = sys.argv[1] #interface the program needs to deploy the XDP on
+OUTPUT_INTERVAL = 10 #read dropped packets after block
+sample_size = 1000 #no. of packets to collect to determine heavy hitters
+threshold_percent = 60 #criteria as to who are heavy hitters
+#end configuration
+
+count = 0 
 sketch = CountMinSketch(1000, 10)
 event_list =[]
 

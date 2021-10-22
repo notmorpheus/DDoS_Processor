@@ -46,8 +46,8 @@ class CountMinSketch(object):
         self.n = 0
         self.tables = []
         self.salt = []
-        for _ in xrange(d):
-            table = array.array("l", (0 for _ in xrange(m)))
+        for _ in range(d):
+            table = array.array("l", (0 for _ in range(m)))
             self.tables.append(table)
             self.salt.append(hash(str(id(table))))
 
